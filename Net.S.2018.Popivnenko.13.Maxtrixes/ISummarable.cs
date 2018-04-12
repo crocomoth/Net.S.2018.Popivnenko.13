@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Net.S._2018.Popivnenko._13
+namespace Net.S._2018.Popivnenko._13.Maxtrixes
 {
-    public class Program
+    public interface ISummarable<T>
     {
-        public static void Main(string[] args)
-        {
-        }
+        T SumWith(ISummarable<T> second);
     }
 }
