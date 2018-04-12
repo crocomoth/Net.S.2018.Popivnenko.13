@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.S.2018.Popivnenko.13.Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.S.2018.Popivnenko.13.Maxtrixes", "Net.S.2018.Popivnenko.13.Maxtrixes\Net.S.2018.Popivnenko.13.Maxtrixes.csproj", "{3FA1B901-894E-4C14-871E-16AA85F7DE4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.S.2018.Popivnenko.13.BinaryTree", "Net.S.2018.Popivnenko.13.BinaryTree\Net.S.2018.Popivnenko.13.BinaryTree.csproj", "{378CFFE1-57D1-4318-B247-55AADF42514B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3FA1B901-894E-4C14-871E-16AA85F7DE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FA1B901-894E-4C14-871E-16AA85F7DE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FA1B901-894E-4C14-871E-16AA85F7DE4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{378CFFE1-57D1-4318-B247-55AADF42514B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378CFFE1-57D1-4318-B247-55AADF42514B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378CFFE1-57D1-4318-B247-55AADF42514B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378CFFE1-57D1-4318-B247-55AADF42514B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
