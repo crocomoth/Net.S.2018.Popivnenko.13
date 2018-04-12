@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Net.S._2018.Popivnenko._13.Maxtrixes
+﻿namespace Net.S._2018.Popivnenko._13.Maxtrixes
 {
+    /// <summary>
+    /// Ensures that class can be summed.
+    /// </summary>
+    /// <typeparam name="T">Type of object.</typeparam>
     public interface ISummarable<T>
     {
         T SumWith(ISummarable<T> second);

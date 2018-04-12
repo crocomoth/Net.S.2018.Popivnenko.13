@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Net.S._2018.Popivnenko._13.BinaryTree;
 
 namespace Net.S._2018.Popivnenko._13

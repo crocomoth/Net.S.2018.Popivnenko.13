@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Net.S._2018.Popivnenko._13.Queue
 {
+    /// <summary>
+    /// Implements basic work with queues.
+    /// </summary>
+    /// <typeparam name="T">Type of queued elements.</typeparam>
     public class QueueClass<T> : IEnumerator<T>
     {
         private T[] _elements;
@@ -15,6 +16,11 @@ namespace Net.S._2018.Popivnenko._13.Queue
         private int _head;
         private T _current;
 
+        /// <summary>
+        /// Constructor.
+        /// throws <see cref="ArgumentNullException"/> case <paramref name="elements"/> is null.
+        /// </summary>
+        /// <param name="elements">Elements which will be used for queue.</param>
         public QueueClass(T[] elements)
         {
             _elements = elements ?? throw new ArgumentNullException(nameof(elements));
@@ -23,6 +29,9 @@ namespace Net.S._2018.Popivnenko._13.Queue
             this._tail = 0;
         }
 
+        /// <summary>
+        /// Basic constructor for a class.
+        /// </summary>
         public QueueClass()
         {
             _elements = new T[16];
@@ -39,6 +48,10 @@ namespace Net.S._2018.Popivnenko._13.Queue
 
         object IEnumerator.Current => Current;
 
+        /// <summary>
+        /// Enqueues <paramref name="elem"/> to the queue.
+        /// </summary>
+        /// <param name="elem">Object to be enqueued.</param>
         public void Enqueue(T elem)
         {
             if (_size == _elements.Length)
@@ -51,6 +64,11 @@ namespace Net.S._2018.Popivnenko._13.Queue
             _size++;
         }
 
+        /// <summary>
+        /// Gets first object from queue.
+        /// throws <exception cref="InvalidOperationException"></exception> if queue is empty.
+        /// </summary>
+        /// <returns>Dequed object.</returns>
         public T Dequeue()
         {
             if (this._size == 0)
@@ -64,6 +82,9 @@ namespace Net.S._2018.Popivnenko._13.Queue
             return result;
         }
 
+        /// <summary>
+        /// Basically resets the collection.
+        /// </summary>
         public void Dispose()
         {
             this._elements = new T[16];
@@ -72,12 +93,19 @@ namespace Net.S._2018.Popivnenko._13.Queue
             _size = 0;
         }
 
+        /// <summary>
+        /// Moves queue head to next position.
+        /// </summary>
+        /// <returns>True if next elem is dequed.</returns>
         public bool MoveNext()
         {
             this.Current = this.Dequeue();
             return _head <= _tail;
         }
 
+        /// <summary>
+        /// Resets the collection.
+        /// </summary>
         public void Reset()
         {
             this.Dispose();
